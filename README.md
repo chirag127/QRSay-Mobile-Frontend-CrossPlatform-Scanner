@@ -92,17 +92,54 @@ qrsay-user-frontend-react-native-expo-app/
 
 This app uses the existing QRSay backend API. The API endpoints are defined in `src/constants/index.js`.
 
+## React Native New Architecture
+
+This project uses React Native's New Architecture, which provides improved performance and better native integration. The New Architecture is enabled by setting `"newArchEnabled": true` in the app.json file.
+
+### Benefits of the New Architecture:
+
+-   Improved performance with the new JavaScript Interface (JSI)
+-   Better interoperability between JavaScript and native code
+-   Reduced bridge traffic with Fabric (the new rendering system)
+-   More efficient native module calls with TurboModules
+
+### Requirements:
+
+-   Expo SDK 49 or higher
+-   React Native 0.72 or higher
+
+### Checking New Architecture Configuration:
+
+To verify that your project is properly configured for the New Architecture, run:
+
+```bash
+npm run check-arch
+```
+
+This script will check:
+
+-   If `newArchEnabled` is set to `true` in app.json
+-   If the Reanimated plugin is properly configured in babel.config.js
+-   If metro.config.js exists with proper configuration
+
 ## Troubleshooting
 
 ### Error: Unsupported top level event type "topInsetsChange" dispatched
 
 If you encounter this error, try the following solutions:
 
-1. Clear the cache and restart the app:
+1. Run the automatic fix script:
 
     ```bash
-    npm run start-clean
+    npm run fix-insets-error
     ```
+
+    This script will:
+
+    - Clear the cache
+    - Add LogBox.ignoreLogs for the topInsetsChange error
+    - Ensure GestureHandlerRootView is properly set up
+    - Restart the app with a clean cache
 
 2. Make sure you have the latest versions of all dependencies:
 

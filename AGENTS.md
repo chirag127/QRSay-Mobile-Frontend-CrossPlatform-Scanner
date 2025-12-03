@@ -6,7 +6,7 @@
 **Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
 **Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
 
---- 
+---
 
 ## 2. INPUT PROCESSING & COGNITION
 *   **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
@@ -19,111 +19,145 @@
     *   **Validation:** Use `docfork` to verify *every* external API signature.
     *   **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
 
---- 
+---
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
-**Directives:** Detect the project type (e.g., `package.json` for React Native/Expo) and apply the corresponding **Apex Toolchain**. This repository, `QRSay-Mobile-Frontend-CrossPlatform-Scanner`, is a React Native/Expo mobile application.
+**Directives:** Detect the project type and apply the corresponding **Apex Toolchain**. This repository, `ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App`, is a React Native mobile application.
 
-*   **PRIMARY SCENARIO: WEB / APP / GUI (Modern Frontend - Mobile Focus)**
-    *   **Stack:** This project leverages **React Native 0.7x** with **Expo 5x**. Key tools include **TypeScript 6.x** (Strict Mode), **Vite 7** (for optimized builds if applicable or via Expo tooling), and **TailwindCSS v4** (via nativewind or similar for React Native). State management adheres to **Signals** (Standardized) for declarative UI updates.
-    *   **Architecture:** Adheres to the **Feature-Sliced Design (FSD)** pattern. This promotes modularity, scalability, and maintainability by organizing code into features, entities, and shared layers.
-    *   **Linting & Formatting:** **Biome 1.7+** is mandated for ultra-fast linting, formatting, and code quality checks across all JavaScript/TypeScript files.
-    *   **Testing:** **Vitest 1.x** is the standard for unit and integration testing. **Playwright 1.x** is used for end-to-end (E2E) testing to ensure seamless user flows on target platforms.
-    *   **Native Modules:** Managed via Expo's ecosystem or `react-native-bundle-visualizer` for optimization.
+*   **PRIMARY SCENARIO: WEB / APP / EXTENSION (TypeScript) - Cross-Platform Mobile**
+    *   **Stack:** This project leverages **React Native 0.75+** with **Expo 51+** for enhanced development velocity and cross-platform capabilities. The primary language is **TypeScript 6.x** (Strict Mode enforced).
+    *   **UI/UX:** Employ **TailwindCSS** (v4+) for utility-first styling and maintainability, integrated via `nativewind` or equivalent. Leverage **Signals** (Standardized) for state management.
+    *   **Architecture:** Adheres to **Feature-Sliced Design (FSD)** for modularity and scalability. Utilize Expo's managed workflow for streamlined builds and deployments.
+    *   **Lint/Format:** Utilize **Biome v17+** for comprehensive linting, formatting, and code quality checks, ensuring consistent and high-quality code.
+    *   **Testing:** Implement robust testing strategies using **Vitest** for unit and component testing, and **Playwright** for end-to-end (E2E) testing across target mobile platforms (iOS/Android simulators).
+    *   **Native Integration:** Leverage **Tauri v2.x** (if applicable for desktop builds or specific native integrations not covered by Expo's SDK, though primary focus is mobile via Expo).
 
-*   **SECONDARY SCENARIO B: SYSTEMS / PERFORMANCE (Low Level) - *Not applicable***
-    *   **Stack:** Rust (Cargo) or Go (Modules).
-    *   **Lint:** Clippy / GolangCI-Lint.
-    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
-
-*   **TERTIARY SCENARIO C: DATA / AI / SCRIPTS (Python) - *Not applicable***
-    *   **Stack:** uv (Manager), Ruff (Linter), Pytest (Test).
+*   **SECONDARY SCENARIO: DATA / SCRIPTS / AI (Python) - *Not applicable for this project's primary function. Reference only for potential backend services or CLI tooling that might interact with this app.***
+    *   **Stack:** Python 3.10+, uv, Ruff, Pytest.
     *   **Architecture:** Modular Monolith or Microservices.
 
---- 
+*   **TERTIARY SCENARIO: SYSTEMS / PERFORMANCE (Rust / Go) - *Not applicable for this project's primary function. Reference only for potential high-performance native modules or backend services.***
+    *   **Stack:** Rust (Cargo, Clippy) or Go (Modules, GolangCI-Lint).
+    *   **Architecture:** Hexagonal Architecture (Ports & Adapters).
 
-## 4. CODE INTEGRITY PROTOCOLS
-*   **SOLID PRINCIPLES:** Strictly enforced for object-oriented design (if applicable within React Native patterns).
-*   **DRY (Don't Repeat Yourself):** Mandatory. Abstract common logic into reusable components and utilities.
-*   **YAGNI (You Ain't Gonna Need It):** Build only what is necessary for current features to maintain agility.
-*   **Configuration Management:** Utilize environment variables (`.env` files managed by Expo/Vite) for sensitive information and build-time configurations.
+---
 
---- 
+## 4. DEVELOPMENT WORKFLOW & STANDARDS
+*   **Version Control:** Git, hosted on GitHub.
+*   **Branching Strategy:** Gitflow (or simpler Trunk-Based Development if context allows for higher velocity).
+*   **Commit Messages:** Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`, `style:`, `perf:`, `ci:`, `build:`, `revert:`).
+*   **Code Quality:** **Zero-Defect** adherence via Biome. **DRY (Don't Repeat Yourself)**, **SOLID principles**, and **YAGNI (You Ain't Gonna Need It)** must be actively applied.
+*   **Dependency Management:** Expo's EAS Build and dependency management, with uv potentially used for any complementary Node.js/NPM tooling if discovered.
+*   **Security:** Proactive security scanning (e.g., `npm audit`, `snyk` integrated into CI), dependency vulnerability checks, and adherence to OWASP Mobile Top 10.
 
-## 5. DEVELOPMENT WORKFLOW & COMMANDS
-*   **Repository:** `https://github.com/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner`
-*   **Setup:**
+---
+
+## 5. VERIFICATION PROTOCOL (COMMANDS)
+**NOTE:** All commands assume a standard Linux/macOS environment. Adjustments for Windows (e.g., PowerShell) may be necessary.
+
+*   **CLONING THE REPOSITORY:**
     bash
-    # 1. Clone the repository
-    git clone https://github.com/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner
-    cd QRSay-Mobile-Frontend-CrossPlatform-Scanner
-
-    # 2. Install dependencies using Expo/npm/yarn
-    # Ensure you have Node.js 18+ and Expo CLI installed
-    npx expo install
-    # OR
-    # npm install
-    # OR
-    # yarn install
+    git clone https://github.com/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App.git
+    cd ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App
     
-*   **Development Server:**
-    *   **Expo Go:** `npx expo start --clear`
-    *   **Build:** `npx expo prebuild` (for native code generation) followed by native build commands (`npx expo run:ios` or `npx expo run:android`).
-*   **Scripts:** (See `package.json` for comprehensive list. Common commands shown below)
-    | Script        | Description                                                   |
-    |---------------|---------------------------------------------------------------|
-    | `dev`         | Start development server with Expo Go.                        |
-    | `lint`        | Run Biome linter and formatter.                               |
-    | `test`        | Execute unit and integration tests with Vitest.               |
-    | `test:e2e`    | Run end-to-end tests with Playwright.                         |
-    | `build:ios`   | Create an iOS production build.
-    | `build:android`| Create an Android production build.
 
---- 
+*   **NODE.JS & PACKAGE INSTALLATION (Using Expo CLI):**
+    *   Ensure Node.js LTS (version 20+ recommended) is installed.
+    *   Install Expo CLI globally if not already present:
+        bash
+        npm install -g expo-cli
+        
+    *   Install project dependencies:
+        bash
+        npm install
+        # or using yarn:
+        # yarn install
+        
 
-## 6. TESTING STRATEGY
-*   **Unit Tests:** Vitest for individual components, hooks, and utility functions. Aim for >80% coverage.
-*   **Integration Tests:** Vitest to test interactions between components and modules.
-*   **End-to-End (E2E) Tests:** Playwright to simulate user interactions on the target platforms (iOS/Android simulators or devices) to validate critical user flows.
+*   **LINTING & FORMATTING (Biome):**
+    *   Check and format code:
+        bash
+        npx @biomejs/biome check --apply
+        npx @biomejs/biome format --write
+        
+    *   For CI verification:
+        bash
+        npx @biomejs/biome check
+        
 
---- 
+*   **TESTING (Vitest for Unit/Component, Playwright for E2E):**
+    *   Run unit and component tests:
+        bash
+        npx vitest
+        
+    *   Run E2E tests (requires Playwright browser binaries installation):
+        bash
+        # Install Playwright browsers if not present
+        npx playwright install
+        # Run E2E tests
+        npx playwright test
+        
 
-## 7. ARCHITECTURAL GUIDELINES
-*   **Feature-Sliced Design (FSD):** Strict adherence to layers (e.g., `app`, `processes`, `pages`, `widgets`, `features`, `entities`, `shared`).
-*   **Component Reusability:** Promote the creation of generic, reusable UI components within the `shared/ui` layer.
-*   **State Management:** Prefer signals or Expo's context API for global state. Local component state for UI-specific logic.
-*   **API Interactions:** Abstract all network requests into dedicated service layers within `entities` or `features`.
+*   **APPLICATION EXECUTION (Expo):**
+    *   Start the development server:
+        bash
+        npx expo start
+        
+    *   To run on an emulator/simulator or physical device, follow the prompts from `expo start` (e.g., press 'a' for Android emulator, 'i' for iOS simulator, or scan QR code with Expo Go app on a physical device).
 
---- 
+*   **BUILDING FOR PRODUCTION (Expo EAS Build):**
+    *   Ensure you are logged into EAS CLI:
+        bash
+        eas login
+        
+    *   Build the application (this command initiates the cloud build process):
+        bash
+        eas build --platform all # or --platform ios / android
+        
 
-## 8. SECURITY MANDATES
-*   **Dependency Scanning:** Regularly run `npm audit` or `yarn audit`. Utilize tools like Snyk or Dependabot for automated vulnerability detection.
-*   **Secrets Management:** Never commit API keys or secrets directly. Use `.env` files and environment variables. Consider secure storage solutions for sensitive production data.
-*   **Input Validation:** Sanitize and validate all user inputs to prevent injection attacks.
-*   **Secure QR Code Handling:** Ensure QR code data is processed securely, avoiding execution of malicious payloads.
+---
 
---- 
+## 5. ARCHITECTURAL & OPERATIONAL AGENTS
 
-## 9. DEPLOYMENT & CI/CD
-*   **CI/CD Pipeline:** Configured via `.github/workflows/ci.yml`. Automates linting, testing, and potentially builds upon pull requests and merges to the main branch.
-*   **Deployment Platform:** Expo Application Services (EAS) for streamlined builds and distribution to app stores.
+**CORE DIRECTIVES:**
+*   **MAINTAINABILITY:** Prioritize clear, modular code following FSD principles. Ensure high cohesion within modules and loose coupling between them.
+*   **PERFORMANCE:** Optimize rendering, state updates, and network requests. Profile critical paths using React DevTools and native profiling tools.
+*   **SECURITY:** Implement secure data handling, input validation, and secure storage for sensitive information. Regularly audit dependencies.
+*   **SCALABILITY:** Design components and features that can grow with user base and feature expansion. Leverage Expo's ecosystem for scaling.
+*   **USER EXPERIENCE:** Deliver a seamless, intuitive, and performant user experience across all target platforms.
 
---- 
+**SPECIFIC AGENT PROTOCOLS:**
+1.  **QR CODE ENGINE AGENT:**
+    *   **Function:** High-speed, reliable QR code generation and scanning.
+    *   **Technology:** Utilize robust libraries (e.g., `expo-camera`, `react-native-vision-camera` with appropriate plugins, `react-native-qrcode-svg` for generation).
+    *   **Optimization:** Ensure scanning performance is maintained even in suboptimal lighting or low-resolution camera feeds. Offload heavy processing to native modules if necessary.
+2.  **DATA SERIALIZATION AGENT:**
+    *   **Function:** Secure and efficient serialization/deserialization of QR code data.
+    *   **Format:** Prefer modern, compact formats like Protocol Buffers (protobuf) or MessagePack over JSON for efficiency, especially for complex data structures embedded in QR codes.
+    *   **Security:** Encrypt sensitive data before serialization if required, using standard cryptographic libraries (`expo-crypto`).
+3.  **CROSS-PLATFORM ABSTRACTION AGENT:**
+    *   **Function:** Ensure UI and functionality are consistent across iOS and Android.
+    *   **Tools:** Leverage React Native and Expo's built-in platform APIs. Use platform-specific code (`Platform.OS`) sparingly and abstract differences where possible.
+    *   **Styling:** `nativewind` or TailwindCSS provides excellent cross-platform styling.
+4.  **STATE MANAGEMENT AGENT:**
+    *   **Function:** Manage application state effectively and predictably.
+    *   **Tools:** Utilize React's `useState`/`useReducer`/`Context API` for local/shared state. For global or complex state, consider Signals or a dedicated library like Zustand or Jotai, ensuring minimal boilerplate.
+5.  **BUILD & DEPLOYMENT AGENT:**
+    *   **Function:** Streamline the build and deployment process.
+    *   **Tools:** Primarily Expo EAS Build for managed builds and deployments. Integrate with CI/CD pipelines (e.g., GitHub Actions) for automated testing and builds.
 
-## 10. CONTRIBUTING & CODE OF CONDUCT
-Refer to `.github/CONTRIBUTING.md` for detailed contribution guidelines and `.github/CODE_OF_CONDUCT.md` for community standards.
+---
 
---- 
+## 6. LEGACY SYSTEM MIGRATION NOTES (N/A for this project)
 
-## 11. ISSUE & PR TEMPLATES
-Utilize provided templates in `.github/ISSUE_TEMPLATE/` and `.github/PULL_REQUEST_TEMPLATE.md` for structured reporting and submissions.
+---
 
---- 
+## 7. CONTACT & SUPPORT PROTOCOL (N/A)
 
-## 12. LICENSE & LEGAL
-This project is licensed under the **CC BY-NC 4.0** license. Refer to the `LICENSE` file for full details.
+---
 
---- 
+## 8. LICENSE INFORMATION (N/A)
 
-## 13. AGENT COMMUNICATION PROTOCOL
-All interactions must be precise, goal-oriented, and adhere to the defined protocols. Use `linkup` for external research, `docfork` for API validation, and `clear-thought-two` for complex reasoning before execution. Always confirm task completion and output standard compliance.
+---
+
+## 9. CODE OF CONDUCT (N/A)

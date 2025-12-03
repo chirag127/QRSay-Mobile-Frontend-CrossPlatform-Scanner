@@ -1,48 +1,45 @@
-build:
-  - text: "Build"
-    url: "https://github.com/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner/actions/workflows/ci.yml"
-    kind: "github-actions-build-status"
-    github_actions_workflow: "ci.yml"
-    github_actions_branch: "main"
-    color: "brightgreen"
-    label: "Build"
+---
+version: '1.0'
+# This file defines the badges to be displayed in the README.md and their configurations.
+# Managed by Apex Technical Authority.
+# Base URL: https://github.com/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App
+badges:
+  - name: "Build Status"
+    url: "https://github.com/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App/actions/workflows/ci.yml"
+    image_url: "https://img.shields.io/github/actions/workflow/status/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App/ci.yml?branch=main&style=flat-square"
+    markdown: "[![Build Status](https://img.shields.io/github/actions/workflow/status/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App/ci.yml?branch=main&style=flat-square)](https://github.com/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App/actions)"
 
-coverage:
-  - text: "Coverage"
-    url: "https://codecov.io/github/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner"
-    kind: "codecov"
-    color: "brightgreen"
-    label: "Coverage"
+  - name: "Code Coverage"
+    url: "https://codecov.io/gh/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App"
+    image_url: "https://img.shields.io/codecov/c/github/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App?token=YOUR_CODECOV_TOKEN&style=flat-square"
+    markdown: "[![Code Coverage](https://img.shields.io/codecov/c/github/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App?token=YOUR_CODECOV_TOKEN&style=flat-square)](https://codecov.io/gh/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App)"
 
-tech_stack:
-  - text: "React Native"
+  - name: "Tech Stack (React Native)"
     url: "https://reactnative.dev/"
-    kind: "custom"
-    color: "informational"
-    label: "Tech Stack"
-  - text: "Expo"
+    image_url: "https://img.shields.io/badge/React%20Native-63FFCD?style=flat-square&logo=reactnative&logoColor=000"
+    markdown: "[![React Native](https://img.shields.io/badge/React%20Native-63FFCD?style=flat-square&logo=reactnative&logoColor=000)](https://reactnative.dev/)"
+
+  - name: "Tech Stack (Expo)"
     url: "https://expo.dev/"
-    kind: "custom"
-    color: "blue"
+    image_url: "https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=FFFFFF"
+    markdown: "[![Expo](https://img.shields.io/badge/Expo-000020?style=flat-square&logo=expo&logoColor=FFFFFF)](https://expo.dev/)"
 
-license:
-  - text: "License"
-    url: "https://github.com/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner/blob/main/LICENSE"
-    kind: "license"
-    license_identifier: "CC BY-NC 4.0"
-    color: "lightgrey"
+  - name: "Language (TypeScript)"
+    url: "https://www.typescriptlang.org/"
+    image_url: "https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=fff"
+    markdown: "[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=fff)](https://www.typescriptlang.org/)"
 
-stars:
-  - text: "Stars"
-    url: "https://github.com/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner"
-    kind: "github-stars"
-    color: "yellowgreen"
-    label: "Stars"
+  - name: "Lint & Format (Biome)"
+    url: "https://biomejs.dev/"
+    image_url: "https://img.shields.io/badge/Biome-95A2A7?style=flat-square&logo=biome&logoColor=000"
+    markdown: "[![Biome](https://img.shields.io/badge/Biome-95A2A7?style=flat-square&logo=biome&logoColor=000)](https://biomejs.dev/)"
 
-# Format is based on https://github.com/badges/shields
-# Example for a badge:
-# - text: "Version"
-#   url: "https://img.shields.io/github/v/release/chirag127/QRSay-Mobile-Frontend-CrossPlatform-Scanner"
-#   kind: "github-release"
-#   color: "blue"
-#   label: "Release"
+  - name: "License (CC BY-NC 4.0)"
+    url: "https://creativecommons.org/licenses/by-nc/4.0/"
+    image_url: "https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square"
+    markdown: "[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-blue?style=flat-square)](https://creativecommons.org/licenses/by-nc/4.0/)"
+
+  - name: "GitHub Stars"
+    url: "https://github.com/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App"
+    image_url: "https://img.shields.io/github/stars/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App?style=flat-square"
+    markdown: "[![GitHub Stars](https://img.shields.io/github/stars/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App?style=flat-square)](https://github.com/chirag127/ScanFlow-CrossPlatform-QRCode-Manager-Mobile-App)"

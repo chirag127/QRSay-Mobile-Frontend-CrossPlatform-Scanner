@@ -1,48 +1,48 @@
-# General
-*.log
-.DS_Store
-Thumbs.db
+# Dependency Directories
+node_modules
 
-# Dependencies
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# Expo / React Native Caches
+.expo
+.expo-shared
+.turbo
 
-# Build Output
-dist/
+# Build Artifacts & Output
 build/
-.output/
+dist/
+coverage/
+*.log
 
-# Environment Variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# TypeScript & JavaScript
+/dist
+/build
+.tsbuildinfo
 
-# IDE / Editor specific
+# Babel, Metro, and Watchman
+.babel.config.js.tmp
+metro-cache/
+watchman
+
+# IDE/Editor Files
 .vscode/
 .idea/
-*.sublime-project
-*.sublime-workspace
+*.swp
 
-# Expo / React Native specific
-.expo/
+# Testing & Reports
+junit.xml
+html-report/
+
+# Local Environment
+.env
+.env.local
+
+# Android specific
 android/build/
-android/app/build/
+android/.gradle/
+
+# iOS specific
 iOS/build/
-*.orig
-*.rej
+iOS/*.xcworkspace
+iOS/*.xcodeproj/xcuserdata/
 
-# macOS / Linux specific
+# macOS specific
 .DS_Store
-Thumbs.db
-
-# Log files
-*.log
-logs/
-
-# Test files
-coverage/
